@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engine de Jogos — Demo</title>
+  <style>
+    html, body { margin: 0; background: #111; height: 100%; overflow: hidden; font-family: sans-serif; }
+    canvas { display: block; margin: 40px auto 0; background: #000; image-rendering: pixelated; }
+    #message {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      color: #fff; background: rgba(0,0,0,.7); padding: 8px 16px; border-radius: 6px;
+      opacity: 0; transition: opacity .3s; pointer-events: none;
+    }
+    #hud { position: fixed; bottom: 8px; left: 8px; color: #ccc; font-size: 12px; }
+    #hud a { color: #7fd; margin-left: 12px; }
+  </style>
+</head>
+<body>
+  <canvas id="game" width="480" height="320"></canvas>
+  <div id="message"></div>
+  <div id="hud">
+    Setas/A-D: mover · Espaço/W: pular · E: interagir (abrir baú)
+    <a href="/editor.html">Editor de Sprites →</a>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
